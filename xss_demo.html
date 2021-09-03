@@ -23,7 +23,7 @@ div.title {
   const urlParams = new URLSearchParams(window.location.search);
   const username = urlParams.get('username');
   
-  if username !== "" {
+  if (username) {
     document.querySelector('input[name="username"]').value = username;
   }
 </script>
