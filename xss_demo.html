@@ -19,16 +19,6 @@ div.title {
     font-size: 3rem;
 }
 </style>
-<script defer>
-(() => {
-    const urlParams = new URLSearchParams(window.location.search);
-    const username = urlParams.get('username');
-
-    if (username) {
-        document.querySelector('input[name="username"]').value = username;
-    }
-})();
-</script>
 <body>
     <div class="title">
         <strong>T</strong>otally <strong>N</strong>ot <strong>S</strong>us
@@ -43,5 +33,19 @@ div.title {
       <input type="password" id="password" name="password">
       <button>Submit</button>
     </form>
+
+    <script>
+    (() => {
+        const urlParams = new URLSearchParams(window.location.search);
+        const username = urlParams.get('username');
+
+        console.log(`Username: ${username}`);
+
+        if (username) {
+            console.log(`Setting Username: ${username}`);
+            document.querySelector('input[name="username"]').value = username;
+        }
+    })();
+    </script>
 </body>
 </html>
