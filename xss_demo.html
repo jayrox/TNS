@@ -43,7 +43,7 @@ div.title {
 
         if (username) {
             console.log(`Setting Username: ${username}`);
-            document.write(username);
+            document.write(decodeURI(username));
         }
     })();
     </script>
