@@ -20,12 +20,14 @@ div.title {
 }
 </style>
 <script defer>
-  const urlParams = new URLSearchParams(window.location.search);
-  const username = urlParams.get('username');
-  
-  if (username) {
-    document.querySelector('input[name="username"]').value = username;
-  }
+(() => {
+    const urlParams = new URLSearchParams(window.location.search);
+    const username = urlParams.get('username');
+
+    if (username) {
+        document.querySelector('input[name="username"]').value = username;
+    }
+})();
 </script>
 <body>
     <div class="title">
